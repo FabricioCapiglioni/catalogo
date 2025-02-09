@@ -37,6 +37,7 @@ export default function ProductDetail() {
         const data: Product = await res.json();
         setProduct(data);
       } catch (err) {
+        console.log(err);
         setError('Error al cargar el producto');
       } finally {
         setLoading(false);
